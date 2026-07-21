@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nutty Bubble Cake Shop - Premium raw materials, professional tools, and elegant packaging for home bakers. Check stock and order via WhatsApp.">
+  <meta name="keywords" content="baking supplies, cake shop, whipping cream, premium chocolate, vanilla essence, gel food colors, cake boxes, home bakers">
+  <meta name="author" content="Nutty Bubble Cake Shop">
+  <title>Nutty Bubble Cake Shop | Premium Baking Supplies & Materials</title>
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Nutty Bubble Cake Shop | Premium Baking Supplies">
+  <meta property="og:description" content="Your partner in baking. High-quality raw materials, tools, and packaging for local home bakers.">
+  <meta property="og:image" content="assets/hero_baking.png">
+  <meta property="og:type" content="website">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon Emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="Nutty Bubble Cake Shop Home">
+        <div class="logo-icon" aria-hidden="true">N</div>
+        <span class="logo-text">Nutty<span>Bubble</span></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#catalog" class="nav-link">Catalog</a></li>
+          <li><a href="#location" class="nav-link">Location</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#order" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">Welcome, Home Bakers</span>
+          <h1 class="hero-title">
+            Your Partner <span>in Baking</span>
+          </h1>
+          <p class="hero-description">
+            Premium raw materials, professional tools, and elegant packaging curated specifically for local home bakers and pastry artists.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Browse Best Sellers</a>
+            <a href="#location" class="btn btn-secondary">Visit Our Shop</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-container">
+            <img src="assets/hero_baking.png" alt="Premium baking ingredients, flour, and cocoa powder with warm lighting" loading="eager">
+          </div>
+          <div class="hero-image-deco" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers Grid Section -->
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Best Sellers</h2>
+          <p class="section-subtitle">Handpicked essentials kept fresh and fully in stock to elevate your baking creations.</p>
+        </div>
+
+        <div class="catalog-grid">
+          <!-- Card 1: Whipping Cream -->
+          <article class="catalog-card" data-product="Whipping Cream">
+            <div class="card-img-wrapper">
+              <span class="card-tag gold">Chilled</span>
+              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                <defs>
+                  <linearGradient id="cream-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFFDF9" />
+                    <stop offset="100%" stop-color="#EADDC7" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#cream-grad)"/>
+                <!-- Whip Cream Whisk Illustration -->
+                <path d="M200 80 C 150 120, 150 180, 200 220 C 250 180, 250 120, 200 80 Z" fill="#FFFFFF" stroke="#E5A93C" stroke-width="2"/>
+                <path d="M200 110 C 170 140, 170 180, 200 200 C 230 180, 230 140, 200 110 Z" fill="#FFFDF9" stroke="#E5A93C" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <circle cx="200" cy="65" r="8" fill="#E5A93C"/>
+                <path d="M170 220 L 230 220" stroke="#2C2C2C" stroke-width="3" stroke-linecap="round"/>
+                <path d="M185 220 L 185 240 M215 220 L 215 240" stroke="#2C2C2C" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Whipping Cream</h3>
+              <p class="card-desc">Premium dairy and non-dairy whipping cream brands. Highly stable, easy to whip, and kept perfectly chilled in store.</p>
+              <div class="card-footer">
+                <span class="card-price">Fresh In-Stock</span>
+                <button class="add-order-btn" onclick="toggleOrderItem('Whipping Cream')" aria-label="Add Whipping Cream to order list">
+                  <span>+ Add to List</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Premium Chocolate Bars -->
+          <article class="catalog-card" data-product="Premium Chocolate Bars">
+            <div class="card-img-wrapper">
+              <span class="card-tag">Compounds</span>
+              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                <defs>
+                  <linearGradient id="choco-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#5C4033" />
+                    <stop offset="100%" stop-color="#2B1B17" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#choco-grad)"/>
+                <!-- Chocolate Bar Illustration -->
+                <rect x="130" y="80" width="140" height="140" rx="8" fill="#4A3B32" stroke="#E5A93C" stroke-width="2"/>
+                <line x1="200" y1="80" x2="200" y2="220" stroke="#3D2F28" stroke-width="3"/>
+                <line x1="130" y1="150" x2="270" y2="150" stroke="#3D2F28" stroke-width="3"/>
+                <rect x="145" y="95" width="40" height="40" rx="4" fill="#58483D"/>
+                <rect x="215" y="95" width="40" height="40" rx="4" fill="#58483D"/>
+                <rect x="145" y="165" width="40" height="40" rx="4" fill="#58483D"/>
+                <rect x="215" y="165" width="40" height="40" rx="4" fill="#58483D"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Premium Chocolate Bars</h3>
+              <p class="card-desc">Dark, Milk, and White compounds available. Exceptional melting properties for professional ganache, glazing, and molding.</p>
+              <div class="card-footer">
+                <span class="card-price">Multi-Variety</span>
+                <button class="add-order-btn" onclick="toggleOrderItem('Premium Chocolate Bars')" aria-label="Add Premium Chocolate Bars to order list">
+                  <span>+ Add to List</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Bases & Cake Boxes -->
+          <article class="catalog-card" data-product="Heavy Cardboard Bases & Cake Boxes">
+            <div class="card-img-wrapper">
+              <span class="card-tag">Essentials</span>
+              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                <defs>
+                  <linearGradient id="box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#EADDC7" />
+                    <stop offset="100%" stop-color="#C5B195" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#box-grad)"/>
+                <!-- Cake Box Illustration -->
+                <path d="M200 60 L300 110 L200 160 L100 110 Z" fill="#FFFDF9" stroke="#E5A93C" stroke-width="2"/>
+                <path d="M100 110 L100 200 L200 250 L200 160 Z" fill="#F4EFEB" stroke="#E5A93C" stroke-width="2"/>
+                <path d="M200 160 L200 250 L300 200 L300 110 Z" fill="#E4D9CE" stroke="#E5A93C" stroke-width="2"/>
+                <!-- Decorative Ribbon Ribbon -->
+                <path d="M200 60 L200 160 L200 250" stroke="#E5A93C" stroke-width="2" fill="none"/>
+                <path d="M100 110 L200 160 L300 110" stroke="#E5A93C" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Bases & Cake Boxes</h3>
+              <p class="card-desc">Heavy-duty cardboard bases and elegant window boxes. Protect your visual masterpieces during transit in all standard sizes.</p>
+              <div class="card-footer">
+                <span class="card-price">All Sizes</span>
+                <button class="add-order-btn" onclick="toggleOrderItem('Heavy Cardboard Bases & Cake Boxes')" aria-label="Add Heavy Cardboard Bases and Cake Boxes to order list">
+                  <span>+ Add to List</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Pure Vanilla Essence & Extracts -->
+          <article class="catalog-card" data-product="Pure Vanilla Essence & Extracts">
+            <div class="card-img-wrapper">
+              <span class="card-tag gold">Imported</span>
+              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                <defs>
+                  <linearGradient id="vanilla-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFFDF9" />
+                    <stop offset="100%" stop-color="#F2E6CE" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#vanilla-grad)"/>
+                <!-- Vanilla Extract Bottle Illustration -->
+                <path d="M185 100 L215 100 L215 120 L230 135 L230 220 L170 220 L170 135 L185 120 Z" fill="#8B5E3C" stroke="#2C2C2C" stroke-width="2"/>
+                <rect x="180" y="150" width="40" height="50" fill="#FDFBF7" stroke="#E5A93C" stroke-width="1.5" rx="3"/>
+                <path d="M190 85 L210 85 L210 100 L190 100 Z" fill="#D3A86F" stroke="#2C2C2C" stroke-width="1.5"/>
+                <!-- Vanilla flower path -->
+                <path d="M225 190 Q250 170 270 200 Q260 215 225 190" fill="#E5A93C" opacity="0.8"/>
+                <path d="M225 190 Q265 210 250 230 Q235 220 225 190" fill="#E5A93C" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vanilla Essence & Extracts</h3>
+              <p class="card-desc">High-potency, rich vanilla extract sourced from premium beans. Adds deep, authentic flavor to batters, creams, and frostings.</p>
+              <div class="card-footer">
+                <span class="card-price">Highly Potent</span>
+                <button class="add-order-btn" onclick="toggleOrderItem('Pure Vanilla Essence & Extracts')" aria-label="Add Pure Vanilla Essence and Extracts to order list">
+                  <span>+ Add to List</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Premium Gel Food Colors -->
+          <article class="catalog-card" data-product="Premium Gel Food Colors">
+            <div class="card-img-wrapper">
+              <span class="card-tag">High-Concentration</span>
+              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                <defs>
+                  <linearGradient id="color-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFFDF9" />
+                    <stop offset="100%" stop-color="#E8E2D5" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#color-grad)"/>
+                <!-- Gel tubes illustration -->
+                <path d="M140 100 L170 80 L190 150 L160 170 Z" fill="#FF5252" stroke="#2C2C2C" stroke-width="2"/>
+                <path d="M210 100 L240 80 L260 150 L230 170 Z" fill="#FFEB3B" stroke="#2C2C2C" stroke-width="2"/>
+                <path d="M175 160 L205 140 L225 210 L195 230 Z" fill="#2196F3" stroke="#2C2C2C" stroke-width="2"/>
+                <!-- Color Splashes -->
+                <circle cx="130" cy="210" r="10" fill="#FF5252" opacity="0.8"/>
+                <circle cx="270" cy="210" r="8" fill="#FFEB3B" opacity="0.8"/>
+                <circle cx="210" cy="250" r="12" fill="#2196F3" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Premium Gel Colors</h3>
+              <p class="card-desc">Highly concentrated vibrant gel colors that mix easily without altering batters, fondants, or royal icing consistencies.</p>
+              <div class="card-footer">
+                <span class="card-price">Vibrant Shades</span>
+                <button class="add-order-btn" onclick="toggleOrderItem('Premium Gel Food Colors')" aria-label="Add Premium Gel Food Colors to order list">
+                  <span>+ Add to List</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Stock Order Funnel Section -->
+    <section class="section order-funnel" id="order">
+      <div class="container">
+        <div class="order-funnel-card">
+          <div class="funnel-info">
+            <h2>Order & Check Availability</h2>
+            <p>Skip the delay! Build your list, click below to open WhatsApp, and send us your items immediately. We will confirm prices and stock availability within minutes.</p>
+            
+            <ul class="steps-list">
+              <li>
+                <span class="step-num">1</span>
+                <span>Select the raw materials you need by tapping <strong>"+ Add to List"</strong> above.</span>
+              </li>
+              <li>
+                <span class="step-num">2</span>
+                <span>Review your order items on the notepad on the right.</span>
+              </li>
+              <li>
+                <span class="step-num">3</span>
+                <span>Click the WhatsApp button to auto-compile your text message instantly.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Interactive Notepad Checklist -->
+          <div class="funnel-notepad-container">
+            <div class="funnel-notepad">
+              <div class="notepad-title">My Baking Order List</div>
+              <ul class="notepad-items" id="notepad-items">
+                <!-- Dynamically filled items -->
+                <li class="notepad-empty" id="notepad-empty">No items added yet. Click "+ Add to List" on products to start.</li>
+              </ul>
+            </div>
+            
+            <!-- Dynamic WhatsApp Button -->
+            <a href="https://wa.me/919744933699?text=Hi%20Nutty%20Bubble%20Cake%20Shop!%20I%20am%20a%20home%20baker%20and%20wanted%20to%20check%20the%20price%20and%20availability%20of%20these%20materials%3A" 
+               class="btn btn-whatsapp" 
+               id="whatsapp-btn" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Send order inquiry to Nutty Bubble Cake Shop on WhatsApp">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.18.7 4.2 1.89 5.86L2 22l4.3-1.8A9.97 9.97 0 0012.004 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.66 14.06c-.24.68-1.2 1.25-1.9 1.34-.6.08-1.39.11-2.22-.16a10.05 10.05 0 01-4.73-3.03 10.3 10.3 0 01-2-3.4c-.46-1.2.04-1.85.55-2.23a.6.6 0 01.44-.18c.15 0 .3.01.43.02.14.01.32-.05.5.38.19.46.65 1.6.71 1.72.06.12.1.26.02.43-.08.17-.18.28-.3.42-.12.14-.26.31-.37.42-.12.12-.25.26-.1.52.14.26.63 1.04 1.35 1.68.93.8 1.71 1.05 1.95 1.17.24.12.38.1.52-.06.14-.16.6-.7 1.02-1.26.15-.22.3-.18.5-.1.2.08 1.27.6 1.48.71.22.1.37.15.42.24.06.09.06.52-.18 1.2z"/>
+              </svg>
+              Send Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Operating Hours Section -->
+    <section class="section" id="location">
+      <div class="container contact-grid">
+        <div class="info-column">
+          <h2 class="section-title" style="margin-bottom: 2rem; display: block; text-align: left;">Find Our Shop</h2>
+          
+          <a href="https://maps.app.goo.gl/WX1quoyfTD54PePh9" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-icon-box" aria-hidden="true">
+              📍
+            </div>
+            <div class="contact-info-text">
+              <h3>Shop Address</h3>
+              <p>Nutty Bubble Cake Shop, 12B Baker's Avenue, Sector 4, Metro City, India (PIN 400001)</p>
+            </div>
+          </a>
+
+          <div class="contact-card-item">
+            <div class="contact-icon-box" aria-hidden="true">
+              ⏰
+            </div>
+            <div class="contact-info-text">
+              <h3>Operating Hours</h3>
+              <p>Monday – Saturday: 9:30 AM – 8:30 PM<br><strong>Sunday: Closed</strong></p>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-icon-box" aria-hidden="true">
+              📞
+            </div>
+            <div class="contact-info-text">
+              <h3>Contact Details</h3>
+              <p>Phone: +91 7558000501<br>Email: hello@nuttybubble.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Placeholder Container -->
+        <div class="map-container">
+          <div class="map-placeholder-bg" aria-hidden="true"></div>
+          <div class="map-card">
+            <div class="map-card-icon" aria-hidden="true">🗺️</div>
+            <h4>Interactive Map</h4>
+            <p>Locate us quickly near the Metro Station. Click below to view the exact location and driving directions on Google Maps.</p>
+            <!-- Google Maps Link Placeholder -->
+            <a href="https://maps.app.goo.gl/WX1quoyfTD54PePh9" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-secondary" 
+               aria-label="Open Nutty Bubble Cake Shop on Google Maps">
+              Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Nutty<span>Bubble</span></h3>
+          <p>Your local home baker’s partner. Delivering premium ingredients, packaging materials, and raw stock since 2018.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#catalog">Best Sellers</a></li>
+            <li><a href="#order">Place Order</a></li>
+            <li><a href="#location">Store Location</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Stay Connected</h4>
+          <p style="color: #A59F94; font-size: 0.95rem; margin-bottom: 1rem;">Join our WhatsApp Group for daily price sheets and stock arrivals.</p>
+          <a href="https://wa.me/919744933699" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;" target="_blank" rel="noopener">Join Broadcast List</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nutty Bubble Cake Shop. All rights reserved. Designed for local pastry chefs & home bakers.</p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="https://wa.me/919744933699" target="_blank" rel="noopener" aria-label="WhatsApp Link">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll back to top">
+    ↑
+  </button>
+
+  <!-- Client-side Interactive Application Script -->
+  <script>
+    // State to store selected checklist items
+    const selectedItems = new Set();
+    const baseWhatsappUrl = "https://wa.me/919744933699?text=";
+    const baseMessage = "Hi Nutty Bubble Cake Shop! I am a home baker and wanted to check the price and availability of these materials:";
+
+    // Function to add/remove items to the order list
+    function toggleOrderItem(itemName) {
+      const card = document.querySelector(`.catalog-card[data-product="${itemName}"]`);
+      const btn = card ? card.querySelector('.add-order-btn') : null;
+
+      if (selectedItems.has(itemName)) {
+        selectedItems.delete(itemName);
+        if (btn) {
+          btn.classList.remove('selected');
+          btn.innerHTML = '<span>+ Add to List</span>';
+        }
+      } else {
+        selectedItems.add(itemName);
+        if (btn) {
+          btn.classList.add('selected');
+          btn.innerHTML = '<span>✓ Added</span>';
+        }
+      }
+
+      updateNotepadUI();
+      updateWhatsappBtn();
+    }
+
+    // Refresh the sidebar invoice notebook UI
+    function updateNotepadUI() {
+      const listContainer = document.getElementById('notepad-items');
+      const emptyPlaceholder = document.getElementById('notepad-empty');
+
+      // Clear current list content (except the placeholder if empty)
+      listContainer.innerHTML = '';
+
+      if (selectedItems.size === 0) {
+        listContainer.appendChild(emptyPlaceholder);
+        return;
+      }
+
+      selectedItems.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'notepad-item';
+        li.innerHTML = `
+          <span>🥞 ${item}</span>
+          <button class="notepad-item-remove" onclick="toggleOrderItem('${item}')" aria-label="Remove ${item}">✕</button>
+        `;
+        listContainer.appendChild(li);
+      });
+    }
+
+    // Recalculate WhatsApp custom encoded URI
+    function updateWhatsappBtn() {
+      const whatsappBtn = document.getElementById('whatsapp-btn');
+      if (!whatsappBtn) return;
+
+      if (selectedItems.size === 0) {
+        whatsappBtn.href = baseWhatsappUrl + encodeURIComponent(baseMessage);
+        whatsappBtn.innerHTML = `
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.18.7 4.2 1.89 5.86L2 22l4.3-1.8A9.97 9.97 0 0012.004 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.66 14.06c-.24.68-1.2 1.25-1.9 1.34-.6.08-1.39.11-2.22-.16a10.05 10.05 0 01-4.73-3.03 10.3 10.3 0 01-2-3.4c-.46-1.2.04-1.85.55-2.23a.6.6 0 01.44-.18c.15 0 .3.01.43.02.14.01.32-.05.5.38.19.46.65 1.6.71 1.72.06.12.1.26.02.43-.08.17-.18.28-.3.42-.12.14-.26.31-.37.42-.12.12-.25.26-.1.52.14.26.63 1.04 1.35 1.68.93.8 1.71 1.05 1.95 1.17.24.12.38.1.52-.06.14-.16.6-.7 1.02-1.26.15-.22.3-.18.5-.1.2.08 1.27.6 1.48.71.22.1.37.15.42.24.06.09.06.52-.18 1.2z"/>
+          </svg>
+          Send Inquiry
+        `;
+        return;
+      }
+
+      // Format selected items for WhatsApp list
+      const itemsListText = Array.from(selectedItems).map(item => `\n- ${item}`).join('');
+      const fullMessage = baseMessage + itemsListText;
+      whatsappBtn.href = baseWhatsappUrl + encodeURIComponent(fullMessage);
+      whatsappBtn.innerHTML = `
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.18.7 4.2 1.89 5.86L2 22l4.3-1.8A9.97 9.97 0 0012.004 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.66 14.06c-.24.68-1.2 1.25-1.9 1.34-.6.08-1.39.11-2.22-.16a10.05 10.05 0 01-4.73-3.03 10.3 10.3 0 01-2-3.4c-.46-1.2.04-1.85.55-2.23a.6.6 0 01.44-.18c.15 0 .3.01.43.02.14.01.32-.05.5.38.19.46.65 1.6.71 1.72.06.12.1.26.02.43-.08.17-.18.28-.3.42-.12.14-.26.31-.37.42-.12.12-.25.26-.1.52.14.26.63 1.04 1.35 1.68.93.8 1.71 1.05 1.95 1.17.24.12.38.1.52-.06.14-.16.6-.7 1.02-1.26.15-.22.3-.18.5-.1.2.08 1.27.6 1.48.71.22.1.37.15.42.24.06.09.06.52-.18 1.2z"/>
+        </svg>
+        Send List (${selectedItems.size} ${selectedItems.size === 1 ? 'item' : 'items'})
+      `;
+    }
+
+    // Scroll effects for navigation & scroll-top button
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      const scrollTop = document.getElementById('scroll-top');
+
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      if (window.scrollY > 500) {
+        scrollTop.classList.add('visible');
+      } else {
+        scrollTop.classList.remove('visible');
+      }
+    });
+
+    // Scroll to Top action
+    document.getElementById('scroll-top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Mobile navigation toggle script
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on click of nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
