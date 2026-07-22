@@ -72,176 +72,259 @@
     <section class="section" id="catalog">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Best Sellers</h2>
+          <h2 class="section-title">Best Sellers & Catalog</h2>
           <p class="section-subtitle">Handpicked essentials kept fresh and fully in stock to elevate your baking creations.</p>
         </div>
 
-        <div class="catalog-grid">
-          <!-- Card 1: Whipping Cream -->
-          <article class="catalog-card" data-product="Whipping Cream">
-            <div class="card-img-wrapper">
-              <span class="card-tag gold">Chilled</span>
-              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
-                <defs>
-                  <linearGradient id="cream-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFDF9" />
-                    <stop offset="100%" stop-color="#EADDC7" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#cream-grad)"/>
-                <!-- Whip Cream Whisk Illustration -->
-                <path d="M200 80 C 150 120, 150 180, 200 220 C 250 180, 250 120, 200 80 Z" fill="#FFFFFF" stroke="#E5A93C" stroke-width="2"/>
-                <path d="M200 110 C 170 140, 170 180, 200 200 C 230 180, 230 140, 200 110 Z" fill="#FFFDF9" stroke="#E5A93C" stroke-width="1.5" stroke-dasharray="3,3"/>
-                <circle cx="200" cy="65" r="8" fill="#E5A93C"/>
-                <path d="M170 220 L 230 220" stroke="#2C2C2C" stroke-width="3" stroke-linecap="round"/>
-                <path d="M185 220 L 185 240 M215 220 L 215 240" stroke="#2C2C2C" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Whipping Cream</h3>
-              <p class="card-desc">Premium dairy and non-dairy whipping cream brands. Highly stable, easy to whip, and kept perfectly chilled in store.</p>
-              <div class="card-footer">
-                <span class="card-price">Fresh In-Stock</span>
-                <button class="add-order-btn" onclick="toggleOrderItem('Whipping Cream')" aria-label="Add Whipping Cream to order list">
-                  <span>+ Add to List</span>
-                </button>
-              </div>
-            </div>
-          </article>
+        <!-- Sub-Category 1: Whipping Creams -->
+        <div class="subcategory-wrapper">
+          <div class="subcategory-header">
+            <span class="subcategory-badge">Featured Sub-Category</span>
+            <h3 class="subcategory-title">Whipping Creams</h3>
+            <p class="subcategory-desc">Select from our top-tier, highly stable whipping cream brands kept perfectly chilled in store.</p>
+          </div>
 
-          <!-- Card 2: Premium Chocolate Bars -->
-          <article class="catalog-card" data-product="Premium Chocolate Bars">
-            <div class="card-img-wrapper">
-              <span class="card-tag">Compounds</span>
-              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
-                <defs>
-                  <linearGradient id="choco-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#5C4033" />
-                    <stop offset="100%" stop-color="#2B1B17" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#choco-grad)"/>
-                <!-- Chocolate Bar Illustration -->
-                <rect x="130" y="80" width="140" height="140" rx="8" fill="#4A3B32" stroke="#E5A93C" stroke-width="2"/>
-                <line x1="200" y1="80" x2="200" y2="220" stroke="#3D2F28" stroke-width="3"/>
-                <line x1="130" y1="150" x2="270" y2="150" stroke="#3D2F28" stroke-width="3"/>
-                <rect x="145" y="95" width="40" height="40" rx="4" fill="#58483D"/>
-                <rect x="215" y="95" width="40" height="40" rx="4" fill="#58483D"/>
-                <rect x="145" y="165" width="40" height="40" rx="4" fill="#58483D"/>
-                <rect x="215" y="165" width="40" height="40" rx="4" fill="#58483D"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Premium Chocolate Bars</h3>
-              <p class="card-desc">Dark, Milk, and White compounds available. Exceptional melting properties for professional ganache, glazing, and molding.</p>
-              <div class="card-footer">
-                <span class="card-price">Multi-Variety</span>
-                <button class="add-order-btn" onclick="toggleOrderItem('Premium Chocolate Bars')" aria-label="Add Premium Chocolate Bars to order list">
-                  <span>+ Add to List</span>
-                </button>
+          <div class="catalog-grid subcategory-grid">
+            <!-- Card 1: Camerry Whipping Cream -->
+            <article class="catalog-card" data-product="Camerry Whipping Cream">
+              <div class="card-img-wrapper">
+                <span class="card-tag gold">Chilled • Premium</span>
+                <img src="assets/camerry.jpg" alt="Camerry Whipping Cream" class="card-img" loading="lazy">
               </div>
-            </div>
-          </article>
+              <div class="card-body">
+                <h3 class="card-title">Camerry Whipping Cream</h3>
+                <p class="card-desc">Superior volume, silky smooth texture, and outstanding whipping stability for fine cake piping and topping.</p>
+                <div class="card-footer">
+                  <span class="card-price">Fresh In-Stock</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Camerry Whipping Cream', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Camerry-Whipping-Cream">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Camerry Whipping Cream', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Camerry Whipping Cream')" aria-label="Add Camerry Whipping Cream to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-          <!-- Card 3: Bases & Cake Boxes -->
-          <article class="catalog-card" data-product="Heavy Cardboard Bases & Cake Boxes">
-            <div class="card-img-wrapper">
-              <span class="card-tag">Essentials</span>
-              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
-                <defs>
-                  <linearGradient id="box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#EADDC7" />
-                    <stop offset="100%" stop-color="#C5B195" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#box-grad)"/>
-                <!-- Cake Box Illustration -->
-                <path d="M200 60 L300 110 L200 160 L100 110 Z" fill="#FFFDF9" stroke="#E5A93C" stroke-width="2"/>
-                <path d="M100 110 L100 200 L200 250 L200 160 Z" fill="#F4EFEB" stroke="#E5A93C" stroke-width="2"/>
-                <path d="M200 160 L200 250 L300 200 L300 110 Z" fill="#E4D9CE" stroke="#E5A93C" stroke-width="2"/>
-                <!-- Decorative Ribbon Ribbon -->
-                <path d="M200 60 L200 160 L200 250" stroke="#E5A93C" stroke-width="2" fill="none"/>
-                <path d="M100 110 L200 160 L300 110" stroke="#E5A93C" stroke-width="2" fill="none"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Bases & Cake Boxes</h3>
-              <p class="card-desc">Heavy-duty cardboard bases and elegant window boxes. Protect your visual masterpieces during transit in all standard sizes.</p>
-              <div class="card-footer">
-                <span class="card-price">All Sizes</span>
-                <button class="add-order-btn" onclick="toggleOrderItem('Heavy Cardboard Bases & Cake Boxes')" aria-label="Add Heavy Cardboard Bases and Cake Boxes to order list">
-                  <span>+ Add to List</span>
-                </button>
+            <!-- Card 2: Pristine Whipping Cream -->
+            <article class="catalog-card" data-product="Pristine Whipping Cream">
+              <div class="card-img-wrapper">
+                <span class="card-tag gold">Chilled • Top Rated</span>
+                <img src="assets/pristine.jpg" alt="Pristine Whipping Cream" class="card-img" loading="lazy">
               </div>
-            </div>
-          </article>
+              <div class="card-body">
+                <h3 class="card-title">Pristine Whipping Cream</h3>
+                <p class="card-desc">Ultra-smooth non-dairy whipping cream engineered for sharp cake edges, intricate piping, and warm climate stability.</p>
+                <div class="card-footer">
+                  <span class="card-price">Fresh In-Stock</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Pristine Whipping Cream', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Pristine-Whipping-Cream">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Pristine Whipping Cream', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Pristine Whipping Cream')" aria-label="Add Pristine Whipping Cream to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-          <!-- Card 4: Pure Vanilla Essence & Extracts -->
-          <article class="catalog-card" data-product="Pure Vanilla Essence & Extracts">
-            <div class="card-img-wrapper">
-              <span class="card-tag gold">Imported</span>
-              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
-                <defs>
-                  <linearGradient id="vanilla-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFDF9" />
-                    <stop offset="100%" stop-color="#F2E6CE" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#vanilla-grad)"/>
-                <!-- Vanilla Extract Bottle Illustration -->
-                <path d="M185 100 L215 100 L215 120 L230 135 L230 220 L170 220 L170 135 L185 120 Z" fill="#8B5E3C" stroke="#2C2C2C" stroke-width="2"/>
-                <rect x="180" y="150" width="40" height="50" fill="#FDFBF7" stroke="#E5A93C" stroke-width="1.5" rx="3"/>
-                <path d="M190 85 L210 85 L210 100 L190 100 Z" fill="#D3A86F" stroke="#2C2C2C" stroke-width="1.5"/>
-                <!-- Vanilla flower path -->
-                <path d="M225 190 Q250 170 270 200 Q260 215 225 190" fill="#E5A93C" opacity="0.8"/>
-                <path d="M225 190 Q265 210 250 230 Q235 220 225 190" fill="#E5A93C" opacity="0.8"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Vanilla Essence & Extracts</h3>
-              <p class="card-desc">High-potency, rich vanilla extract sourced from premium beans. Adds deep, authentic flavor to batters, creams, and frostings.</p>
-              <div class="card-footer">
-                <span class="card-price">Highly Potent</span>
-                <button class="add-order-btn" onclick="toggleOrderItem('Pure Vanilla Essence & Extracts')" aria-label="Add Pure Vanilla Essence and Extracts to order list">
-                  <span>+ Add to List</span>
-                </button>
+            <!-- Card 3: Champion Whipping Cream -->
+            <article class="catalog-card" data-product="Champion Whipping Cream">
+              <div class="card-img-wrapper">
+                <span class="card-tag gold">Chilled • Heavy Duty</span>
+                <img src="assets/champion.jpg" alt="Champion Whipping Cream" class="card-img" loading="lazy">
               </div>
-            </div>
-          </article>
+              <div class="card-body">
+                <h3 class="card-title">Champion Whipping Cream</h3>
+                <p class="card-desc">Professional-grade whipping cream delivering rich taste, high overrun yield, and long-lasting structural hold.</p>
+                <div class="card-footer">
+                  <span class="card-price">Fresh In-Stock</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Champion Whipping Cream', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Champion-Whipping-Cream">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Champion Whipping Cream', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Champion Whipping Cream')" aria-label="Add Champion Whipping Cream to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
 
-          <!-- Card 5: Premium Gel Food Colors -->
-          <article class="catalog-card" data-product="Premium Gel Food Colors">
-            <div class="card-img-wrapper">
-              <span class="card-tag">High-Concentration</span>
-              <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
-                <defs>
-                  <linearGradient id="color-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFDF9" />
-                    <stop offset="100%" stop-color="#E8E2D5" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#color-grad)"/>
-                <!-- Gel tubes illustration -->
-                <path d="M140 100 L170 80 L190 150 L160 170 Z" fill="#FF5252" stroke="#2C2C2C" stroke-width="2"/>
-                <path d="M210 100 L240 80 L260 150 L230 170 Z" fill="#FFEB3B" stroke="#2C2C2C" stroke-width="2"/>
-                <path d="M175 160 L205 140 L225 210 L195 230 Z" fill="#2196F3" stroke="#2C2C2C" stroke-width="2"/>
-                <!-- Color Splashes -->
-                <circle cx="130" cy="210" r="10" fill="#FF5252" opacity="0.8"/>
-                <circle cx="270" cy="210" r="8" fill="#FFEB3B" opacity="0.8"/>
-                <circle cx="210" cy="250" r="12" fill="#2196F3" opacity="0.8"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Premium Gel Colors</h3>
-              <p class="card-desc">Highly concentrated vibrant gel colors that mix easily without altering batters, fondants, or royal icing consistencies.</p>
-              <div class="card-footer">
-                <span class="card-price">Vibrant Shades</span>
-                <button class="add-order-btn" onclick="toggleOrderItem('Premium Gel Food Colors')" aria-label="Add Premium Gel Food Colors to order list">
-                  <span>+ Add to List</span>
-                </button>
+        <!-- Sub-Category 2: Essential Baking Supplies -->
+        <div class="subcategory-wrapper">
+          <div class="subcategory-header">
+            <h3 class="subcategory-title">Essential Baking Supplies</h3>
+            <p class="subcategory-desc">High-quality chocolate compounds, vanilla extracts, gel colors, and heavy-duty packaging.</p>
+          </div>
+
+          <div class="catalog-grid">
+            <!-- Card 4: Premium Chocolate Bars -->
+            <article class="catalog-card" data-product="Premium Chocolate Bars">
+              <div class="card-img-wrapper">
+                <span class="card-tag">Compounds</span>
+                <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="choco-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#5C4033" />
+                      <stop offset="100%" stop-color="#2B1B17" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#choco-grad)"/>
+                  <rect x="130" y="80" width="140" height="140" rx="8" fill="#4A3B32" stroke="#E5A93C" stroke-width="2"/>
+                  <line x1="200" y1="80" x2="200" y2="220" stroke="#3D2F28" stroke-width="3"/>
+                  <line x1="130" y1="150" x2="270" y2="150" stroke="#3D2F28" stroke-width="3"/>
+                  <rect x="145" y="95" width="40" height="40" rx="4" fill="#58483D"/>
+                  <rect x="215" y="95" width="40" height="40" rx="4" fill="#58483D"/>
+                  <rect x="145" y="165" width="40" height="40" rx="4" fill="#58483D"/>
+                  <rect x="215" y="165" width="40" height="40" rx="4" fill="#58483D"/>
+                </svg>
               </div>
-            </div>
-          </article>
+              <div class="card-body">
+                <h3 class="card-title">Premium Chocolate Bars</h3>
+                <p class="card-desc">Dark, Milk, and White compounds available. Exceptional melting properties for professional ganache, glazing, and molding.</p>
+                <div class="card-footer">
+                  <span class="card-price">Multi-Variety</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Premium Chocolate Bars', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Premium-Chocolate-Bars">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Premium Chocolate Bars', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Premium Chocolate Bars')" aria-label="Add Premium Chocolate Bars to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: Heavy Cardboard Bases & Cake Boxes -->
+            <article class="catalog-card" data-product="Heavy Cardboard Bases & Cake Boxes">
+              <div class="card-img-wrapper">
+                <span class="card-tag">Essentials</span>
+                <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#EADDC7" />
+                      <stop offset="100%" stop-color="#C5B195" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#box-grad)"/>
+                  <path d="M200 60 L300 110 L200 160 L100 110 Z" fill="#FFFDF9" stroke="#E5A93C" stroke-width="2"/>
+                  <path d="M100 110 L100 200 L200 250 L200 160 Z" fill="#F4EFEB" stroke="#E5A93C" stroke-width="2"/>
+                  <path d="M200 160 L200 250 L300 200 L300 110 Z" fill="#E4D9CE" stroke="#E5A93C" stroke-width="2"/>
+                  <path d="M200 60 L200 160 L200 250" stroke="#E5A93C" stroke-width="2" fill="none"/>
+                  <path d="M100 110 L200 160 L300 110" stroke="#E5A93C" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Bases & Cake Boxes</h3>
+                <p class="card-desc">Heavy-duty cardboard bases and elegant window boxes. Protect your visual masterpieces during transit in all standard sizes.</p>
+                <div class="card-footer">
+                  <span class="card-price">All Sizes</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Heavy Cardboard Bases & Cake Boxes', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Heavy-Cardboard-Bases-Cake-Boxes">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Heavy Cardboard Bases & Cake Boxes', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Heavy Cardboard Bases & Cake Boxes')" aria-label="Add Heavy Cardboard Bases and Cake Boxes to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Pure Vanilla Essence & Extracts -->
+            <article class="catalog-card" data-product="Pure Vanilla Essence & Extracts">
+              <div class="card-img-wrapper">
+                <span class="card-tag gold">Imported</span>
+                <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="vanilla-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FFFDF9" />
+                      <stop offset="100%" stop-color="#F2E6CE" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#vanilla-grad)"/>
+                  <path d="M185 100 L215 100 L215 120 L230 135 L230 220 L170 220 L170 135 L185 120 Z" fill="#8B5E3C" stroke="#2C2C2C" stroke-width="2"/>
+                  <rect x="180" y="150" width="40" height="50" fill="#FDFBF7" stroke="#E5A93C" stroke-width="1.5" rx="3"/>
+                  <path d="M190 85 L210 85 L210 100 L190 100 Z" fill="#D3A86F" stroke="#2C2C2C" stroke-width="1.5"/>
+                  <path d="M225 190 Q250 170 270 200 Q260 215 225 190" fill="#E5A93C" opacity="0.8"/>
+                  <path d="M225 190 Q265 210 250 230 Q235 220 225 190" fill="#E5A93C" opacity="0.8"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Vanilla Essence & Extracts</h3>
+                <p class="card-desc">High-potency, rich vanilla extract sourced from premium beans. Adds deep, authentic flavor to batters, creams, and frostings.</p>
+                <div class="card-footer">
+                  <span class="card-price">Highly Potent</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Pure Vanilla Essence & Extracts', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Pure-Vanilla-Essence-Extracts">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Pure Vanilla Essence & Extracts', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Pure Vanilla Essence & Extracts')" aria-label="Add Pure Vanilla Essence and Extracts to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7: Premium Gel Food Colors -->
+            <article class="catalog-card" data-product="Premium Gel Food Colors">
+              <div class="card-img-wrapper">
+                <span class="card-tag">High-Concentration</span>
+                <svg viewBox="0 0 400 300" class="card-img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="color-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FFFDF9" />
+                      <stop offset="100%" stop-color="#E8E2D5" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#color-grad)"/>
+                  <path d="M140 100 L170 80 L190 150 L160 170 Z" fill="#FF5252" stroke="#2C2C2C" stroke-width="2"/>
+                  <path d="M210 100 L240 80 L260 150 L230 170 Z" fill="#FFEB3B" stroke="#2C2C2C" stroke-width="2"/>
+                  <path d="M175 160 L205 140 L225 210 L195 230 Z" fill="#2196F3" stroke="#2C2C2C" stroke-width="2"/>
+                  <circle cx="130" cy="210" r="10" fill="#FF5252" opacity="0.8"/>
+                  <circle cx="270" cy="210" r="8" fill="#FFEB3B" opacity="0.8"/>
+                  <circle cx="210" cy="250" r="12" fill="#2196F3" opacity="0.8"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Premium Gel Colors</h3>
+                <p class="card-desc">Highly concentrated vibrant gel colors that mix easily without altering batters, fondants, or royal icing consistencies.</p>
+                <div class="card-footer">
+                  <span class="card-price">Vibrant Shades</span>
+                  <div class="qty-control-wrapper">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn" onclick="updateQty('Premium Gel Food Colors', -1)" aria-label="Decrease quantity">-</button>
+                      <span class="qty-val" id="qty-Premium-Gel-Food-Colors">0</span>
+                      <button type="button" class="qty-btn" onclick="updateQty('Premium Gel Food Colors', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-order-btn" onclick="toggleAddProduct('Premium Gel Food Colors')" aria-label="Add Premium Gel Food Colors to list">
+                      <span>+ Add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -396,65 +479,108 @@
 
   <!-- Client-side Interactive Application Script -->
   <script>
-    // State to store selected checklist items
-    const selectedItems = new Set();
+    // State object to store selected items and their quantities
+    const orderState = {};
     const baseWhatsappUrl = "https://wa.me/919744933699?text=";
-    const baseMessage = "Hi Nutty Bubble Cake Shop! I am a home baker and wanted to check the price and availability of these materials:";
+    const baseMessage = "Hi Nutty Bubble Cake Shop! I am a home baker and wanted to check availability: ";
 
-    // Function to add/remove items to the order list
-    function toggleOrderItem(itemName) {
-      const card = document.querySelector(`.catalog-card[data-product="${itemName}"]`);
-      const btn = card ? card.querySelector('.add-order-btn') : null;
+    // Function to update item quantity by delta (+1 or -1)
+    function updateQty(productName, delta) {
+      const currentQty = orderState[productName] || 0;
+      let newQty = currentQty + delta;
+      if (newQty < 0) newQty = 0;
+      setProductQty(productName, newQty);
+    }
 
-      if (selectedItems.has(itemName)) {
-        selectedItems.delete(itemName);
-        if (btn) {
-          btn.classList.remove('selected');
-          btn.innerHTML = '<span>+ Add to List</span>';
-        }
+    // Toggle item from + Add button (if 0, sets to 1; if > 0, removes it)
+    function toggleAddProduct(productName) {
+      const currentQty = orderState[productName] || 0;
+      if (currentQty > 0) {
+        setProductQty(productName, 0);
       } else {
-        selectedItems.add(itemName);
-        if (btn) {
-          btn.classList.add('selected');
-          btn.innerHTML = '<span>✓ Added</span>';
-        }
+        setProductQty(productName, 1);
+      }
+    }
+
+    // Explicitly set quantity for a product
+    function setProductQty(productName, qty) {
+      if (qty <= 0) {
+        delete orderState[productName];
+      } else {
+        orderState[productName] = qty;
       }
 
+      updateCardUI(productName);
       updateNotepadUI();
       updateWhatsappBtn();
     }
 
-    // Refresh the sidebar invoice notebook UI
+    // Update card styling and counter displays
+    function updateCardUI(productName) {
+      const cards = document.querySelectorAll(`.catalog-card[data-product="${CSS.escape(productName)}"]`);
+      cards.forEach(card => {
+        const currentQty = orderState[productName] || 0;
+        const qtyValEl = card.querySelector('.qty-val');
+        const addBtn = card.querySelector('.add-order-btn');
+
+        if (qtyValEl) qtyValEl.textContent = currentQty;
+
+        if (currentQty > 0) {
+          card.classList.add('in-cart');
+          if (addBtn) {
+            addBtn.classList.add('selected');
+            addBtn.innerHTML = '<span>✓ Added</span>';
+          }
+        } else {
+          card.classList.remove('in-cart');
+          if (addBtn) {
+            addBtn.classList.remove('selected');
+            addBtn.innerHTML = '<span>+ Add</span>';
+          }
+        }
+      });
+    }
+
+    // Refresh order list notepad UI in funnel
     function updateNotepadUI() {
       const listContainer = document.getElementById('notepad-items');
-      const emptyPlaceholder = document.getElementById('notepad-empty');
+      if (!listContainer) return;
 
-      // Clear current list content (except the placeholder if empty)
-      listContainer.innerHTML = '';
+      const items = Object.entries(orderState);
 
-      if (selectedItems.size === 0) {
-        listContainer.appendChild(emptyPlaceholder);
+      if (items.length === 0) {
+        listContainer.innerHTML = '<li class="notepad-empty" id="notepad-empty">No items added yet. Adjust quantities on products to start.</li>';
         return;
       }
 
-      selectedItems.forEach(item => {
+      listContainer.innerHTML = '';
+      items.forEach(([item, qty]) => {
         const li = document.createElement('li');
         li.className = 'notepad-item';
+        const safeItem = item.replace(/'/g, "\\'");
         li.innerHTML = `
-          <span>🥞 ${item}</span>
-          <button class="notepad-item-remove" onclick="toggleOrderItem('${item}')" aria-label="Remove ${item}">✕</button>
+          <span class="notepad-item-name">🥞 ${qty}x ${item}</span>
+          <div class="notepad-item-controls">
+            <button type="button" class="notepad-btn-sm" onclick="updateQty('${safeItem}', -1)" aria-label="Decrease ${item}">-</button>
+            <span class="notepad-qty-badge">${qty}</span>
+            <button type="button" class="notepad-btn-sm" onclick="updateQty('${safeItem}', 1)" aria-label="Increase ${item}">+</button>
+            <button type="button" class="notepad-item-remove" onclick="setProductQty('${safeItem}', 0)" aria-label="Remove ${item}">✕</button>
+          </div>
         `;
         listContainer.appendChild(li);
       });
     }
 
-    // Recalculate WhatsApp custom encoded URI
+    // Recalculate WhatsApp encoded URI with exact quantities (e.g. 2x Pristine Whipping Cream, 1x Morde Dark Compound...)
     function updateWhatsappBtn() {
       const whatsappBtn = document.getElementById('whatsapp-btn');
       if (!whatsappBtn) return;
 
-      if (selectedItems.size === 0) {
-        whatsappBtn.href = baseWhatsappUrl + encodeURIComponent(baseMessage);
+      const items = Object.entries(orderState);
+
+      if (items.length === 0) {
+        const defaultMsg = "Hi Nutty Bubble Cake Shop! I am a home baker and wanted to check availability of raw materials.";
+        whatsappBtn.href = baseWhatsappUrl + encodeURIComponent(defaultMsg);
         whatsappBtn.innerHTML = `
           <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.18.7 4.2 1.89 5.86L2 22l4.3-1.8A9.97 9.97 0 0012.004 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.66 14.06c-.24.68-1.2 1.25-1.9 1.34-.6.08-1.39.11-2.22-.16a10.05 10.05 0 01-4.73-3.03 10.3 10.3 0 01-2-3.4c-.46-1.2.04-1.85.55-2.23a.6.6 0 01.44-.18c.15 0 .3.01.43.02.14.01.32-.05.5.38.19.46.65 1.6.71 1.72.06.12.1.26.02.43-.08.17-.18.28-.3.42-.12.14-.26.31-.37.42-.12.12-.25.26-.1.52.14.26.63 1.04 1.35 1.68.93.8 1.71 1.05 1.95 1.17.24.12.38.1.52-.06.14-.16.6-.7 1.02-1.26.15-.22.3-.18.5-.1.2.08 1.27.6 1.48.71.22.1.37.15.42.24.06.09.06.52-.18 1.2z"/>
@@ -464,15 +590,16 @@
         return;
       }
 
-      // Format selected items for WhatsApp list
-      const itemsListText = Array.from(selectedItems).map(item => `\n- ${item}`).join('');
+      const itemsListText = items.map(([item, qty]) => `${qty}x ${item}`).join(', ');
+      const totalItems = items.reduce((sum, [, qty]) => sum + qty, 0);
       const fullMessage = baseMessage + itemsListText;
+
       whatsappBtn.href = baseWhatsappUrl + encodeURIComponent(fullMessage);
       whatsappBtn.innerHTML = `
         <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.18.7 4.2 1.89 5.86L2 22l4.3-1.8A9.97 9.97 0 0012.004 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.66 14.06c-.24.68-1.2 1.25-1.9 1.34-.6.08-1.39.11-2.22-.16a10.05 10.05 0 01-4.73-3.03 10.3 10.3 0 01-2-3.4c-.46-1.2.04-1.85.55-2.23a.6.6 0 01.44-.18c.15 0 .3.01.43.02.14.01.32-.05.5.38.19.46.65 1.6.71 1.72.06.12.1.26.02.43-.08.17-.18.28-.3.42-.12.14-.26.31-.37.42-.12.12-.25.26-.1.52.14.26.63 1.04 1.35 1.68.93.8 1.71 1.05 1.95 1.17.24.12.38.1.52-.06.14-.16.6-.7 1.02-1.26.15-.22.3-.18.5-.1.2.08 1.27.6 1.48.71.22.1.37.15.42.24.06.09.06.52-.18 1.2z"/>
         </svg>
-        Send List (${selectedItems.size} ${selectedItems.size === 1 ? 'item' : 'items'})
+        Send Inquiry (${totalItems} ${totalItems === 1 ? 'item' : 'items'})
       `;
     }
 

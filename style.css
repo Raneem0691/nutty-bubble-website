@@ -427,26 +427,102 @@ p {
   color: var(--color-charcoal);
 }
 
-.card-desc {
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
+/* Sub-Category Sections */
+.subcategory-wrapper {
+  margin-bottom: 3.5rem;
 }
 
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--color-card-border);
+.subcategory-header {
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-.card-price {
-  font-family: var(--font-sans);
-  font-weight: 700;
+.subcategory-badge {
+  display: inline-block;
+  background-color: var(--color-gold-light);
   color: var(--color-gold-hover);
-  font-size: 1.15rem;
+  border: 1px solid var(--color-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+}
+
+.subcategory-title {
+  font-size: 1.8rem;
+  color: var(--color-charcoal);
+  margin-bottom: 0.4rem;
+}
+
+.subcategory-desc {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-light);
+}
+
+.catalog-card.in-cart {
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 24px rgba(229, 169, 60, 0.22);
+  background-color: #FFFDFB;
+}
+
+/* Quantity Control Stepper Box */
+.qty-control-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-bg-cream);
+  border: 1px solid var(--color-card-border);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 34px;
+  transition: var(--transition-smooth);
+}
+
+.catalog-card.in-cart .qty-stepper {
+  border-color: var(--color-gold);
+  background-color: var(--color-white);
+}
+
+.qty-btn {
+  width: 30px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  color: var(--color-charcoal);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  user-select: none;
+}
+
+.qty-btn:hover {
+  background-color: var(--color-gold-light);
+  color: var(--color-gold-hover);
+}
+
+.qty-val {
+  min-width: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  user-select: none;
+}
+
+.catalog-card.in-cart .qty-val {
+  color: var(--color-gold-hover);
 }
 
 /* Order add checkbox styling as elegant interactive button */
@@ -457,7 +533,7 @@ p {
   background-color: transparent;
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -580,10 +656,53 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   font-size: 0.9rem;
   animation: fadeIn 0.3s ease;
-  line-height: 2rem;
-  padding-left: 1rem;
+  line-height: 1.4;
+  padding: 0.5rem 0.25rem 0.5rem 1rem;
+}
+
+.notepad-item-name {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.notepad-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.notepad-btn-sm {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid var(--color-card-border);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.notepad-btn-sm:hover {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border-color: var(--color-gold);
+}
+
+.notepad-qty-badge {
+  font-weight: 700;
+  font-size: 0.85rem;
+  min-width: 16px;
+  text-align: center;
+  color: var(--color-gold-hover);
 }
 
 .notepad-item-remove {
@@ -591,8 +710,9 @@ p {
   border: none;
   color: var(--color-charcoal-light);
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   opacity: 0.5;
+  padding: 0 4px;
   transition: var(--transition-smooth);
 }
 
