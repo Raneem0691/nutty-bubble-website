@@ -880,6 +880,30 @@ p {
   font-size: 0.95rem;
 }
 
+.phone-link {
+  color: var(--color-gold-hover);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.phone-link:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+.phone-link-footer {
+  color: var(--color-gold);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.phone-link-footer:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
 /* Google Maps / Map Placeholder with Premium Design */
 .map-container {
   border-radius: 12px;
