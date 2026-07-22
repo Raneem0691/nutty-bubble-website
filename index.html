@@ -76,8 +76,29 @@
           <p class="section-subtitle">Handpicked essentials kept fresh and fully in stock to elevate your baking creations.</p>
         </div>
 
+        <!-- Sticky Category Anchor Navigation Bar -->
+        <nav class="cat-nav-bar" id="cat-nav-bar" aria-label="Category navigation">
+          <div class="cat-nav-container">
+            <a href="#whipping-creams" class="cat-nav-btn active" data-target="whipping-creams">
+              <span class="cat-icon">🥛</span> Whipping Creams
+            </a>
+            <a href="#mello-chocolates" class="cat-nav-btn" data-target="mello-chocolates">
+              <span class="cat-icon">🍫</span> Mello Chocolates
+            </a>
+            <a href="#vanilla-essence" class="cat-nav-btn" data-target="vanilla-essence">
+              <span class="cat-icon">✨</span> Vanilla Essence
+            </a>
+            <a href="#bases-and-boxes" class="cat-nav-btn" data-target="bases-and-boxes">
+              <span class="cat-icon">📦</span> Bases & Boxes
+            </a>
+            <a href="#gel-colors-and-decor" class="cat-nav-btn" data-target="gel-colors-and-decor">
+              <span class="cat-icon">🎨</span> Gel Colors & Decor
+            </a>
+          </div>
+        </nav>
+
         <!-- Sub-Category 1: Whipping Creams -->
-        <div class="subcategory-wrapper">
+        <div class="subcategory-wrapper" id="whipping-creams">
           <div class="subcategory-header">
             <span class="subcategory-badge">Featured Sub-Category</span>
             <h3 class="subcategory-title">Whipping Creams</h3>
@@ -163,7 +184,7 @@
         </div>
 
         <!-- Sub-Category 2: Mello Compound Chocolates -->
-        <div class="subcategory-wrapper">
+        <div class="subcategory-wrapper" id="mello-chocolates">
           <div class="subcategory-header">
             <span class="subcategory-badge">Featured Sub-Category</span>
             <h3 class="subcategory-title">Mello Compound Chocolates</h3>
@@ -249,7 +270,7 @@
         </div>
 
         <!-- Sub-Category 3: Vanilla Essence & Extracts -->
-        <div class="subcategory-wrapper">
+        <div class="subcategory-wrapper" id="vanilla-essence">
           <div class="subcategory-header">
             <span class="subcategory-badge">Featured Sub-Category</span>
             <h3 class="subcategory-title">Vanilla Essence & Extracts</h3>
@@ -335,7 +356,7 @@
         </div>
 
         <!-- Sub-Category 4: Cardboard Bases & Cake Boxes -->
-        <div class="subcategory-wrapper">
+        <div class="subcategory-wrapper" id="bases-and-boxes">
           <div class="subcategory-header">
             <span class="subcategory-badge">Featured Sub-Category</span>
             <h3 class="subcategory-title">Cardboard Bases & Cake Boxes</h3>
@@ -660,7 +681,7 @@
         </div>
 
         <!-- Sub-Category 5: Essential Baking Supplies -->
-        <div class="subcategory-wrapper">
+        <div class="subcategory-wrapper" id="gel-colors-and-decor">
           <div class="subcategory-header">
             <h3 class="subcategory-title">Essential Baking Supplies</h3>
             <p class="subcategory-desc">High-concentration gel food colors and specialty decorative baking tools.</p>
@@ -1029,6 +1050,37 @@
         navLinks.classList.remove('active');
       });
     });
+
+    // Category Navigation Bar Active State Observer on Scroll
+    const catNavBtns = document.querySelectorAll('.cat-nav-btn');
+    const subcategorySections = document.querySelectorAll('.subcategory-wrapper[id]');
+
+    if (subcategorySections.length > 0 && 'IntersectionObserver' in window) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '-120px 0px -50% 0px',
+        threshold: 0
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.getAttribute('id');
+            catNavBtns.forEach(btn => {
+              if (btn.getAttribute('data-target') === currentId) {
+                btn.classList.add('active');
+                // Scroll button into view in horizontally scrollable navbar
+                btn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+              } else {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      subcategorySections.forEach(section => sectionObserver.observe(section));
+    }
   </script>
 </body>
 </html>
